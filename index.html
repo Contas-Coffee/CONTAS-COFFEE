@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTAS COOFFEE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="website icon" type="png"
+    href="LOGO.png">
+</head>
+<body>
+    <header>
+        <h1>BIENVENIDO CONTAS COFFEE</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre-nosotros" class="cta-button">Sobre Nosotros</a></li>
+                <li><a href="#nuestro-cafe" class="cta-button">Nuestro Café</a></li>
+                <li><a href="#menu" class="cta-button">Menú</a></li>
+                <li><a href="#ubicacion" class="cta-button">Ubicación</a></li>
+                <li><a href="#eventos" class="cta-button">Eventos Especiales</a></li>
+                <li><a href="#Horario" class="cta-button">Horario</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+
+        function mostrarSeccion(seccionId) {
+            var secciones = document.querySelectorAll('section');
+            secciones.forEach(function(seccion) {
+                if (seccion.id === seccionId) {
+                    seccion.style.display = 'block';
+                } else {
+                    seccion.style.display = 'none';
+                }
+            });
+        }
+        
+        document.querySelectorAll('nav a').forEach(function(enlace) {
+            enlace.addEventListener('click', function(evento) {
+                var seccionId = evento.target.getAttribute('href').substring(1);
+                mostrarSeccion(seccionId);
+            });
+        });
+
+        // Mostrar la sección inicial (Sobre Nosotros) al cargar la página
+        mostrarSeccion('sobre-nosotros');
+      </script>
+      
+    <section id="sobre-nosotros" >
+        <h2>Sobre Nosotros</h2>
+        <p>somos un lugar acogedor donde los clientes pueden disfrutar de deliciosas bebidas calientes, refrescantes opciones frías,
+            y tentempiés deliciosos. También ofrecemos un ambiente relajante para que las personas socialicen, estudien o trabajen. 
+            Nuestro objetivo es proporcionar una experiencia única y agradable a todos nuestros clientes                            </p>
+    </section>
+
+    <section id="nuestro-cafe">
+        <h2>Nuestro Café</h2>
+        <p>Descubre nuestra variedad de cafés de especialidad... <br>
+        Nuestro café esta elaborado con los la cosecha de granos más Fina en Guatemala...</p>
+    </section>
+
+    <section id="menu">
+        <h2>Menú</h2>
+        <p>Disfruta con la compañia de los mejores Postres.....</p>
+        <h3>Bebidas</h3>
+
+        <div class="menu">
+            <img src="EXPRESO.jpg" alt="Producto 1">
+            <h3>Café Expreso</h3>
+            <p>Q15</p>
+        </div>
+
+        <div class="menu">
+            <img src="CAFE AMERICANO.png" alt="Producto 2">
+            <h3>Café Americano</h3>
+            <p>Q15</p>
+        </div>
+
+        <div class="menu">
+            <img src="CAPUCCHINO" alt="Producto 3">
+            <h3>Capuchino</h3>
+            <p>Q20</p>
+        </div>
+        
+        <div class="menu">
+            <img src="LATTE.avif" alt="Producto 4">
+            <h3>Latte</h3>
+            <p>Q22</p>
+        </div>
+
+        <div class="menu">
+            <img src="Latte MAcchiatto.webp" alt="Producto 5">
+            <h3>Latte Macchiato</h3>
+            <p>Q24</p>
+        </div>
+
+        <div class="menu">
+            <img src="Smoothie_Fresa.jpeg" alt="Producto 6">
+            <h3>Smoothie de Fresa</h3>
+            <p>Q20</p>
+        </div>
+
+        <div class="menu">
+            <img src="Smoothie de Chocolate.webp" alt="Producto 7">
+            <h3>Smoothie de Chocolate</h3>
+            <p>Q24</p>
+        </div>
+
+        <h3>Postres</h3>
+        <div class="menu">
+            <img src="TARTA-de-tres LECHESS.jpg" alt="Producto 8">
+            <h3>Tarta de Tres Leches</h3>
+            <p>Q15</p>
+        </div>
+
+        <div class="menu">
+            <img src="TARTA_LIMON.jpg" alt="Producto 9">
+            <h3>Tarta de Limón</h3>
+            <p>Q15</p>
+        </div>
+
+        <div class="menu">
+            <img src="Tarta_Queso.jpeg" alt="Producto 10">
+            <h3>Tarta de Queso</h3>
+            <p>Q15</p>
+        </div>
+
+        <div class="menu">
+            <img src="GALLETAS-CHISPAS DE CHOCOLATE.jpg" alt="Producto 11">
+            <h3>Galletas Con <br>Chispas de Chocolate</h3>
+            <p>Q10</p>
+        </div>
+
+
+    </section>
+
+    <section id="ubicacion">
+        <h2>Ubicación</h2>
+        <p>Encuéntranos en 4ta Avenida zona 2 Villa Canales, cerca del parque central...</p>
+    </section>
+
+    <section id="eventos">
+        <h2>Eventos Especiales</h2>
+        <p>Únete a nosotros para eventos especiales...</p>
+        <p>Agenda Tu Evento. Contáctamos por medio de instagram...</p>
+        <a href="https://www.instagram.com/contas_coffee/" class="instagram-button"><img src="LOGO INSTAGRAM.jpeg" alt="logo instagram" class="IMG"></a>
+        
+    </section>
+
+    <section id="Horario">
+        <h2>Horarios</h2>
+        <p>Horario: Lunes a Viernes: 7:00am - 8:00pm... </p>
+        <p>Sábado y Domingo de 9:00am - 8:00pm...</p>
+
+        
+    </section>
+
+    <footer>
+        <p>&copy; 2024 CONTAS COFFEE. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+
+
+
+s
